@@ -1,4 +1,4 @@
-import { Mail, Youtube } from "lucide-react";
+import { Youtube } from "lucide-react";
 
 const FooterSection = () => {
   return (
@@ -14,16 +14,10 @@ const FooterSection = () => {
             </p>
             <div className="space-y-3 mb-6">
               <p className="font-body text-foreground/80">
-                <span className="text-primary font-medium">Leo Clark</span> · Diretor & Roteirista
+                <span className="text-primary font-medium">Leo Clark</span> · Diretor
               </p>
-              <a href="mailto:leoclark@gmail.com" className="font-body text-foreground/70 hover:text-primary transition-colors block">
-                leoclark@gmail.com
-              </a>
             </div>
             <div className="flex items-center gap-6">
-              <a href="mailto:leoclark@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                <Mail size={22} />
-              </a>
               <a href="https://youtube.com/@LeoClarkPéNaTábua" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Youtube size={22} />
               </a>

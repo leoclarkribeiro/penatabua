@@ -1,5 +1,3 @@
-import { Play } from "lucide-react";
-
 const VideoSection = () => {
   return (
     <section id="video" className="py-24 md:py-32 bg-card">
@@ -11,25 +9,24 @@ const VideoSection = () => {
           <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground">
             Trailer <span className="text-gradient-gold">Oficial</span>
           </h2>
+          <p className="font-body text-muted-foreground text-sm mt-3">
+            Versão provisória
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative aspect-video bg-card rounded-sm overflow-hidden group cursor-pointer border border-border">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex flex-col items-center gap-4">
-                <div className="w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
-                  <Play className="text-primary group-hover:text-primary-foreground transition-colors ml-1" size={32} />
-                </div>
-                <p className="font-body text-muted-foreground text-sm">
-                  Trailer em breve
-                </p>
-              </div>
-            </div>
+          <div className="relative w-full overflow-hidden rounded-sm border border-border aspect-[891/668] bg-black">
+            <iframe
+              className="absolute inset-0 h-full w-full border-0"
+              width={891}
+              height={668}
+              src="https://www.youtube.com/embed/sxkvWd1aXxE"
+              title="Trailer Pé na Tábua - Versão provisória"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
           </div>
-
-          <p className="text-center font-body text-muted-foreground mt-6 text-sm">
-            Inscreva-se para ser notificado quando o trailer oficial for lançado.
-          </p>
         </div>
       </div>
     </section>

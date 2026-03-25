@@ -43,7 +43,7 @@ const HeroSection = () => {
           Em um país sem neve, nasceu uma geração que decidiu surfar montanhas pelo mundo e colocou o Brasil no mapa dos esportes de inverno.
         </p>
         <p className="font-body text-sm text-foreground/40 mt-6 animate-fade-in" style={{ animationDelay: "0.7s" }}>
-          Direção & Roteiro: Leo Clark
+          Diretor: Leo Clark
         </p>
       </div>
 
