@@ -7,19 +7,19 @@ const VideoSection = () => {
             Assista
           </p>
           <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground">
-            Trailer <span className="text-gradient-gold">Oficial</span>
+            Trailer <span className="text-gradient-gold">Temporário</span>
           </h2>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative w-full overflow-hidden rounded-sm border border-border aspect-video bg-black">
+          <div className="relative w-full overflow-hidden rounded-sm border border-border aspect-[1041/702] bg-black">
             <iframe
               className="absolute inset-0 h-full w-full border-0"
-              width={640}
-              height={360}
-              src="https://player.vimeo.com/video/58459387?h=430f55d5f9"
-              title="Trailer Temporário"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              width={1041}
+              height={702}
+              src="https://www.youtube.com/embed/xN0klmIzx0o"
+              title="Trailer Pé na Tábua - Versão provisória 2012"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             />
