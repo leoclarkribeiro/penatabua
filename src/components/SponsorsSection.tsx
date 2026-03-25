@@ -1,53 +1,108 @@
-import { Award, Globe, Tv, Mountain } from "lucide-react";
+import { Award, Globe, Tv, Mountain, Sparkles, Users } from "lucide-react";
+
+const brandValues = [
+  "Espírito pioneiro",
+  "Expansão internacional",
+  "Inovação",
+  "Performance",
+  "Juventude",
+  "Estilo de vida aspiracional",
+  "Mobilidade global",
+];
+
+const projectPotential = [
+  "Exibição em festivais nacionais e internacionais",
+  "Distribuição em streaming",
+  "Exibição em canais esportivos, culturais e nas estações de neve do mundo inteiro",
+  "Conteúdo para redes sociais",
+];
 
 const partners = [
   {
     name: "CBDN",
-    desc: "Confederação Brasileira de Desportos na Neve — acesso institucional e acervo histórico completo",
+    desc: "Confederação Brasileira de Desportos na Neve",
   },
   {
     name: "FIS",
-    desc: "Federação Internacional de Ski e Snowboard — apoio internacional confirmado",
+    desc: "Federação Internacional de Ski e Snowboard",
   },
   {
     name: "Osklen",
-    desc: "Primeira marca de luxo global brasileira — fundador é personagem central do filme",
+    desc: "Primeira marca de luxo global brasileira",
   },
-  {
-    name: "Isabel Clark",
-    desc: "Quatro vezes olímpica — participação confirmada",
-  },
-  {
-    name: "Domingos Giobbi",
-    desc: "Fundador da CBDN — entrevista exclusiva, primeira vez diante das câmeras",
-  },
-];
-
-const distribution = [
-  { icon: Tv, text: "Plataformas de streaming: Netflix, Prime Video, Apple TV+, Globoplay, Max" },
-  { icon: Award, text: "Festivais: Sundance, SXSW, Hot Docs, É Tudo Verdade" },
-  { icon: Globe, text: "Canais esportivos e culturais — programação temática de inverno" },
-  { icon: Mountain, text: "Exibição em estações de neve onde 70%+ dos visitantes já são brasileiros" },
 ];
 
 const SponsorsSection = () => {
   return (
     <section id="parceiros" className="py-24 md:py-32">
       <div className="container mx-auto px-6 md:px-12">
+        <div className="max-w-4xl mx-auto mb-20">
+          <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4 text-center">
+            Marcas
+          </p>
+          <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-8 text-center">
+            Oportunidade para <span className="text-gradient-gold">marcas</span>
+          </h2>
+          <p className="font-body text-foreground/70 text-lg text-center leading-relaxed mb-10">
+            Pé na Tábua dialoga com valores centrais de grandes empresas brasileiras. O snowboard conecta
+            surf, skate, música, moda e viagem, onde marcas constroem desejo.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3 mb-10">
+            {brandValues.map((v) => (
+              <div
+                key={v}
+                className="flex items-center gap-3 p-4 bg-card border border-border rounded-sm"
+              >
+                <Sparkles className="text-primary flex-shrink-0" size={18} />
+                <p className="font-body text-foreground/80">{v}</p>
+              </div>
+            ))}
+          </div>
+          <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4 text-center">
+            Potencial
+          </p>
+          <p className="font-body text-foreground/80 text-center mb-6">
+            Este é um projeto com potencial de:
+          </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            {projectPotential.map((text) => (
+              <div key={text} className="flex items-start gap-3 p-5 bg-card border border-border rounded-sm">
+                <Award className="text-primary mt-0.5 flex-shrink-0" size={20} />
+                <p className="font-body text-foreground/80 leading-relaxed text-sm md:text-base">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="max-w-3xl mx-auto mb-20 p-8 md:p-10 border border-primary/20 rounded-sm bg-card/50">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Users className="text-primary" size={22} />
+            <p className="font-body text-sm tracking-[0.3em] text-primary uppercase">
+              Público-alvo do documentário
+            </p>
+          </div>
+          <p className="font-body text-foreground/80 text-lg leading-relaxed text-center">
+            Brasileiros entre 20 e 50 anos, com renda para viagens internacionais, apaixonados por estilo
+            de vida ativo e aventura. Famílias que viajam ao exterior pelo menos uma vez por ano. Jovens
+            que buscam referências além do futebol. Conectados, aspiracionais e abertos a novas
+            experiências. Este é exatamente o consumidor que grandes marcas brasileiras querem alcançar.
+          </p>
+        </div>
+
         <div className="text-center mb-16">
           <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4">
-            Confirmados
+            Apoio confirmado
           </p>
           <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Já a <span className="text-gradient-gold">Bordo</span>
+            Parceiros <span className="text-gradient-gold">oficiais</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 mb-20 max-w-4xl mx-auto">
           {partners.map((p) => (
             <div
               key={p.name}
-              className="p-6 rounded-sm bg-card border border-border hover:border-primary/30 transition-colors"
+              className="p-6 rounded-sm bg-card border border-border hover:border-primary/30 transition-colors text-center"
             >
               <h3 className="font-display text-xl text-primary mb-2 normal-case">{p.name}</h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
@@ -60,17 +115,35 @@ const SponsorsSection = () => {
             Alcance
           </p>
           <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-            Potencial de <span className="text-gradient-gold">Distribuição</span>
+            Canais de <span className="text-gradient-gold">distribuição</span>
           </h3>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
-          {distribution.map((d, i) => (
-            <div key={i} className="flex items-start gap-4 p-6 bg-card border border-border rounded-sm">
-              <d.icon className="text-primary mt-1 flex-shrink-0" size={24} />
-              <p className="font-body text-foreground/80 leading-relaxed">{d.text}</p>
-            </div>
-          ))}
+          <div className="flex items-start gap-4 p-6 bg-card border border-border rounded-sm">
+            <Tv className="text-primary mt-1 flex-shrink-0" size={24} />
+            <p className="font-body text-foreground/80 leading-relaxed">
+              Streaming, canais esportivos e culturais, e exibição temática em estações de neve.
+            </p>
+          </div>
+          <div className="flex items-start gap-4 p-6 bg-card border border-border rounded-sm">
+            <Award className="text-primary mt-1 flex-shrink-0" size={24} />
+            <p className="font-body text-foreground/80 leading-relaxed">
+              Festivais nacionais e internacionais de cinema documentário.
+            </p>
+          </div>
+          <div className="flex items-start gap-4 p-6 bg-card border border-border rounded-sm">
+            <Globe className="text-primary mt-1 flex-shrink-0" size={24} />
+            <p className="font-body text-foreground/80 leading-relaxed">
+              Presença global alinhada ao público brasileiro nas principais regiões de neve.
+            </p>
+          </div>
+          <div className="flex items-start gap-4 p-6 bg-card border border-border rounded-sm">
+            <Mountain className="text-primary mt-1 flex-shrink-0" size={24} />
+            <p className="font-body text-foreground/80 leading-relaxed">
+              Conteúdo para redes sociais e extensão da narrativa além da tela.
+            </p>
+          </div>
         </div>
 
         <div className="text-center">

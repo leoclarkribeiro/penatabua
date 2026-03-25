@@ -35,7 +35,7 @@ const FooterSection = () => {
               Pé na Tábua
             </p>
             <p className="font-body text-foreground/60 italic mb-4">
-              é a história de como um país tropical decidiu conquistar a neve — e o fez.
+              É a história de como um país tropical decidiu conquistar a neve e o fez.
             </p>
             <p className="font-body text-sm text-muted-foreground">
               © {new Date().getFullYear()} Pé na Tábua. Todos os direitos reservados.

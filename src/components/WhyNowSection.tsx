@@ -1,10 +1,13 @@
 import { Snowflake } from "lucide-react";
 
 const reasons = [
-  "O Brasil conquistou seu primeiro ouro olímpico de inverno — uma primeira histórica para toda a América do Sul",
-  "Crescimento de 37% no turismo internacional brasileiro em 2025, liderado por destinos de neve",
-  "Mais de 70% das vagas em estações de ski no Chile são ocupadas por brasileiros. Aspen contrata instrutores brasileiros para atender a demanda em português",
-  "Uma geração criada no surf e skate transformou os esportes de inverno. Essa história nunca foi contada nas telas",
+  "Primeiro ouro olímpico de inverno do Brasil e da América do Sul (2026).",
+  "Crescimento recorde do turismo brasileiro para destinos de neve.",
+  "Nova geração de atletas competindo em alto nível internacional.",
+  "Consolidação do Brasil como principal público latino nas estações do Chile, da Argentina, dos EUA e da Europa.",
+  "Crescimento de 37% no turismo internacional em 2025.",
+  "70%+ de ocupação brasileira nas estações de ski no Chile.",
+  "Interesse em esportes de neve está crescendo 10–15% ao ano no Brasil.",
 ];
 
 const WhyNowSection = () => {
@@ -13,11 +16,14 @@ const WhyNowSection = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
           <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4 text-center">
-            Timing
+            2026
           </p>
-          <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-12 text-center">
-            Por que <span className="text-gradient-gold">agora</span>
+          <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6 text-center">
+            Por que esse filme importa <span className="text-gradient-gold">agora</span>
           </h2>
+          <p className="font-body text-foreground/70 text-lg text-center mb-12 max-w-2xl mx-auto">
+            2026 marca um divisor de águas. O Brasil deixou de ser apenas espectador. Passou a ser protagonista.
+          </p>
 
           <div className="space-y-6">
             {reasons.map((reason, i) => (

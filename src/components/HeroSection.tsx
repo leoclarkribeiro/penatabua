@@ -13,7 +13,7 @@ const HeroSection = () => {
       />
       <div className="absolute inset-0 bg-gradient-overlay" />
       <div className="absolute inset-0 bg-background/40" />
-      
+
       <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-12 py-6">
         <span className="font-display text-lg tracking-widest text-foreground uppercase">
           Pé na Tábua
@@ -31,7 +31,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
         <p className="font-body text-sm md:text-base tracking-[0.3em] text-foreground/60 uppercase mb-4 animate-fade-in">
-          Documentário · 90 min · 2026
+          Proposta de Patrocínio · Documentário · 2026
         </p>
         <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-gradient-gold leading-none mb-6 animate-fade-in-up">
           Pé na Tábua
@@ -40,7 +40,7 @@ const HeroSection = () => {
           A história do snowboard no Brasil
         </p>
         <p className="font-body text-base md:text-lg text-foreground/50 max-w-xl mt-4 italic animate-fade-in" style={{ animationDelay: "0.5s" }}>
-          Como um país tropical sem neve se tornou uma força dominante nos Jogos Olímpicos de Inverno?
+          Em um país sem neve, nasceu uma geração que decidiu surfar montanhas pelo mundo e colocou o Brasil no mapa dos esportes de inverno.
         </p>
         <p className="font-body text-sm text-foreground/40 mt-6 animate-fade-in" style={{ animationDelay: "0.7s" }}>
           Direção & Roteiro: Leo Clark

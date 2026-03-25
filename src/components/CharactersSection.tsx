@@ -1,27 +1,33 @@
 const characters = [
   {
     name: "Isabel Clark",
-    subtitle: "A Vida Vivida por Inteiro",
+    subtitle: "Pioneira e ícone",
     description:
-      "Quatro Jogos Olímpicos. O melhor resultado olímpico de inverno da América do Sul — 9º lugar em Turim 2006, recorde que permanece 20 anos depois. A única dos cinco irmãos Clark sem filhos. Hoje vive em Aspen como instrutora — e ganha mais ensinando ski do que snowboard. A rebelde que virou professora do esporte rival. Sua história é a espinha dorsal emocional do filme.",
+      "Quatro participações olímpicas (2006, 2010, 2014, 2018). O rosto do snowboard brasileiro por duas décadas.",
+  },
+  {
+    name: "Lucas Pinheiro Braathen",
+    subtitle: "Herói olímpico",
+    description:
+      "Ouro no giant slalom em Milão-Cortina 2026 — primeira medalha de inverno do Brasil e da América do Sul.",
   },
   {
     name: "Augustinho Teixeira",
-    subtitle: "Nascido no Fim do Mundo",
+    subtitle: "Nova geração",
     description:
-      "Sua primeira experiência de deslize foi nas dunas de areia do Ceará, com 2 anos. Nascido em Ushuaia, filho de mãe brasileira e pai argentino, começou a esquiar em um glaciar aos 3 anos. Mudou-se para Calgary ainda criança. Virou mecânico de automóveis para sobreviver. Aos 21, tentou um doublecork 1440 — quatro rotações — no halfpipe olímpico de Milão.",
+      "Primeiro brasileiro a vencer uma etapa da Copa Continental (2025). Competidor no halfpipe em 2026.",
   },
   {
-    name: "A Diáspora",
-    subtitle: "Brasileiros que Nunca Voltaram",
+    name: "Oskar Metsavaht",
+    subtitle: "Empresário e visionário",
     description:
-      "Centenas de brasileiros foram trabalhar uma temporada em uma estação de ski e ficaram para sempre. Casaram na montanha. Abriram negócios. Criaram filhos que nunca viveram no Brasil. Escolheram uma sensação no lugar de um país.",
+      "Fundador da Osklen, pioneiro em trazer o estilo de vida de montanha ao Brasil.",
   },
   {
-    name: "CBDN",
-    subtitle: "A Instituição que Construiu uma Nação",
+    name: "Stefano Arnhold",
+    subtitle: "A voz institucional",
     description:
-      "A confederação brasileira de esportes de neve não tem montanhas — mas organiza competições internacionais em todo o continente. Quando a FIS precisa de um delegado técnico no Chile ou na Argentina, chama um brasileiro. Do sonho de um fundador à Casa Brasileira nos Jogos de Milão: 30 anos de soft power brasileiro.",
+      "Ex-Presidente da CBDN. A voz institucional do esporte de neve no Brasil.",
   },
 ];
 
@@ -31,14 +37,18 @@ const CharactersSection = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4">
-            Personagens
+            Os personagens
           </p>
           <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground">
-            Os <span className="text-gradient-gold">Protagonistas</span>
+            Histórias <span className="text-gradient-gold">humanas</span>
           </h2>
+          <p className="font-body text-foreground/70 text-lg mt-6 max-w-2xl mx-auto">
+            O documentário é construído em torno de histórias humanas reais. Atletas que abriram mão da
+            estabilidade para perseguir um sonho na neve.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {characters.map((char) => (
             <div
               key={char.name}
@@ -55,22 +65,6 @@ const CharactersSection = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        <div className="max-w-3xl mx-auto mt-16 text-center">
-          <div className="p-8 border border-primary/20 rounded-sm bg-card/50">
-            <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4 normal-case">
-              O Coração do Filme
-            </h3>
-            <p className="font-body text-foreground/70 text-lg leading-relaxed mb-4">
-              Cada personagem deste filme abriu mão de algo enorme pela mesma coisa: a sensação de 
-              deslizar na neve. Surfistas que viraram gente de montanha. Trabalhadores que viraram 
-              moradores. Uma campeã que virou professora do esporte rival.
-            </p>
-            <p className="font-body text-primary text-xl italic font-medium">
-              O que você abriria mão para sentir que está voando?
-            </p>
-          </div>
         </div>
       </div>
     </section>
