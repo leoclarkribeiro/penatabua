@@ -4,22 +4,22 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 
 const images = [
-  { src: gallery1, alt: "Snowboarder with Brazilian flag reflection", w: 800, h: 1024, span: "row-span-2" },
-  { src: gallery2, alt: "Snowboarder jumping against blue sky", w: 1024, h: 800, span: "" },
-  { src: gallery3, alt: "Brazilian athletes celebrating on mountain top", w: 1024, h: 800, span: "" },
-  { src: gallery4, alt: "Snowboard in snow at sunset", w: 800, h: 1024, span: "row-span-2" },
+  { src: gallery1, alt: "Snowboarder com reflexo da bandeira brasileira", w: 800, h: 1024, span: "row-span-2" },
+  { src: gallery2, alt: "Snowboarder saltando contra o céu azul", w: 1024, h: 800, span: "" },
+  { src: gallery3, alt: "Atletas brasileiros celebrando no topo da montanha", w: 1024, h: 800, span: "" },
+  { src: gallery4, alt: "Prancha de snowboard na neve ao pôr do sol", w: 800, h: 1024, span: "row-span-2" },
 ];
 
 const GallerySection = () => {
   return (
-    <section id="gallery" className="py-24 md:py-32 bg-card">
+    <section id="gallery" className="py-24 md:py-32">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4">
-            Gallery
+            Galeria
           </p>
           <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground">
-            Behind the <span className="text-gradient-gold">Scenes</span>
+            Por trás das <span className="text-gradient-gold">Câmeras</span>
           </h2>
         </div>
 
@@ -43,7 +43,7 @@ const GallerySection = () => {
         </div>
 
         <p className="text-center font-body text-muted-foreground mt-8 text-sm">
-          More photos coming soon — stay tuned for exclusive behind-the-scenes content.
+          Mais fotos em breve — acompanhe nosso conteúdo exclusivo dos bastidores.
         </p>
       </div>
     </section>

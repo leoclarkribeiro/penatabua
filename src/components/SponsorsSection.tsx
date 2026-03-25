@@ -1,64 +1,84 @@
-import { Handshake, Eye, Globe, TrendingUp } from "lucide-react";
+import { Award, Globe, Tv, Mountain } from "lucide-react";
 
-const benefits = [
+const partners = [
   {
-    icon: Eye,
-    title: "Global Visibility",
-    desc: "Your brand featured across international film festivals, streaming platforms, and press coverage.",
+    name: "CBDN",
+    desc: "Confederação Brasileira de Desportos na Neve — acesso institucional e acervo histórico completo",
   },
   {
-    icon: Globe,
-    title: "Cross-Cultural Reach",
-    desc: "Connect with audiences in Brazil and worldwide through an authentic, compelling story.",
+    name: "FIS",
+    desc: "Federação Internacional de Ski e Snowboard — apoio internacional confirmado",
   },
   {
-    icon: TrendingUp,
-    title: "Brand Alignment",
-    desc: "Associate with resilience, adventure, and the spirit of breaking boundaries.",
+    name: "Osklen",
+    desc: "Primeira marca de luxo global brasileira — fundador é personagem central do filme",
   },
   {
-    icon: Handshake,
-    title: "Custom Partnerships",
-    desc: "Flexible sponsorship tiers from product placement to title sponsorship.",
+    name: "Isabel Clark",
+    desc: "Quatro vezes olímpica — participação confirmada",
   },
+  {
+    name: "Domingos Giobbi",
+    desc: "Fundador da CBDN — entrevista exclusiva, primeira vez diante das câmeras",
+  },
+];
+
+const distribution = [
+  { icon: Tv, text: "Plataformas de streaming: Netflix, Prime Video, Apple TV+, Globoplay, Max" },
+  { icon: Award, text: "Festivais: Sundance, SXSW, Hot Docs, É Tudo Verdade" },
+  { icon: Globe, text: "Canais esportivos e culturais — programação temática de inverno" },
+  { icon: Mountain, text: "Exibição em estações de neve onde 70%+ dos visitantes já são brasileiros" },
 ];
 
 const SponsorsSection = () => {
   return (
-    <section id="sponsors" className="py-24 md:py-32 bg-card">
+    <section id="parceiros" className="py-24 md:py-32">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4">
-            Partnership
+            Confirmados
           </p>
           <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Become a <span className="text-gradient-gold">Sponsor</span>
+            Já a <span className="text-gradient-gold">Bordo</span>
           </h2>
-          <p className="font-body text-foreground/70 text-lg max-w-2xl mx-auto">
-            Join us in telling this extraordinary story. We're looking for partners who share 
-            our passion for adventure, culture, and pushing boundaries.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {benefits.map((b) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20 max-w-5xl mx-auto">
+          {partners.map((p) => (
             <div
-              key={b.title}
-              className="p-6 rounded-sm bg-background border border-border hover:border-primary/30 transition-colors group"
+              key={p.name}
+              className="p-6 rounded-sm bg-card border border-border hover:border-primary/30 transition-colors"
             >
-              <b.icon className="text-primary mb-4" size={28} />
-              <h3 className="font-display text-lg text-foreground mb-2 normal-case">{b.title}</h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+              <h3 className="font-display text-xl text-primary mb-2 normal-case">{p.name}</h3>
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mb-12">
+          <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4">
+            Alcance
+          </p>
+          <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+            Potencial de <span className="text-gradient-gold">Distribuição</span>
+          </h3>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
+          {distribution.map((d, i) => (
+            <div key={i} className="flex items-start gap-4 p-6 bg-card border border-border rounded-sm">
+              <d.icon className="text-primary mt-1 flex-shrink-0" size={24} />
+              <p className="font-body text-foreground/80 leading-relaxed">{d.text}</p>
             </div>
           ))}
         </div>
 
         <div className="text-center">
           <a
-            href="#contact"
+            href="#contato"
             className="inline-block font-display text-sm tracking-widest uppercase px-10 py-4 bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
           >
-            Request Sponsorship Deck
+            Solicitar Proposta de Patrocínio
           </a>
         </div>
       </div>

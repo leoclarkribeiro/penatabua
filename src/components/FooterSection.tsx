@@ -1,25 +1,30 @@
-import { Mail, Instagram, Youtube } from "lucide-react";
+import { Mail, Youtube } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer id="contact" className="py-16 md:py-24 border-t border-border">
+    <footer id="contato" className="py-16 md:py-24 border-t border-border">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Get in <span className="text-gradient-gold">Touch</span>
+              Entre em <span className="text-gradient-gold">Contato</span>
             </h2>
-            <p className="font-body text-foreground/70 text-lg mb-8 max-w-md">
-              Interested in sponsoring, screening, or collaborating? We'd love to hear from you.
+            <p className="font-body text-foreground/70 text-lg mb-6 max-w-md">
+              Interessado em patrocinar, exibir ou colaborar? Adoraríamos ouvir de você.
             </p>
+            <div className="space-y-3 mb-6">
+              <p className="font-body text-foreground/80">
+                <span className="text-primary font-medium">Leo Clark</span> · Diretor & Roteirista
+              </p>
+              <a href="mailto:leoclark@gmail.com" className="font-body text-foreground/70 hover:text-primary transition-colors block">
+                leoclark@gmail.com
+              </a>
+            </div>
             <div className="flex items-center gap-6">
-              <a href="mailto:contact@penatabua.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:leoclark@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail size={22} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Instagram size={22} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://youtube.com/@LeoClarkPéNaTábua" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Youtube size={22} />
               </a>
             </div>
@@ -27,10 +32,13 @@ const FooterSection = () => {
 
           <div className="flex flex-col items-start md:items-end">
             <p className="font-display text-5xl md:text-6xl font-bold text-gradient-gold mb-4">
-              Pé na Tabua
+              Pé na Tábua
+            </p>
+            <p className="font-body text-foreground/60 italic mb-4">
+              é a história de como um país tropical decidiu conquistar a neve — e o fez.
             </p>
             <p className="font-body text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Pé na Tabua. All rights reserved.
+              © {new Date().getFullYear()} Pé na Tábua. Todos os direitos reservados.
             </p>
           </div>
         </div>
