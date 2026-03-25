@@ -9,20 +9,17 @@ const VideoSection = () => {
           <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground">
             Trailer <span className="text-gradient-gold">Oficial</span>
           </h2>
-          <p className="font-body text-muted-foreground text-sm mt-3">
-            Versão provisória
-          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative w-full overflow-hidden rounded-sm border border-border aspect-[891/668] bg-black">
+          <div className="relative w-full overflow-hidden rounded-sm border border-border aspect-video bg-black">
             <iframe
               className="absolute inset-0 h-full w-full border-0"
-              width={891}
-              height={668}
-              src="https://www.youtube.com/embed/sxkvWd1aXxE"
-              title="Trailer Pé na Tábua - Versão provisória"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              width={640}
+              height={360}
+              src="https://player.vimeo.com/video/58459387?h=430f55d5f9"
+              title="Trailer Temporário"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             />
