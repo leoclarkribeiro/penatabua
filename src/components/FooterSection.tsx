@@ -1,4 +1,7 @@
-import { Youtube } from "lucide-react";
+import { Mail, Youtube } from "lucide-react";
+
+/** Set to e.g. `mailto:you@example.com` when ready. */
+const FOOTER_EMAIL_HREF = "";
 
 const FooterSection = () => {
   return (
@@ -18,6 +21,14 @@ const FooterSection = () => {
               </p>
             </div>
             <div className="flex items-center gap-6">
+              <a
+                href={FOOTER_EMAIL_HREF || "#"}
+                onClick={FOOTER_EMAIL_HREF ? undefined : (e) => e.preventDefault()}
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label={FOOTER_EMAIL_HREF ? "Enviar e-mail" : "E-mail em breve"}
+              >
+                <Mail size={22} />
+              </a>
               <a href="https://youtube.com/@LeoClarkPéNaTábua" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Youtube size={22} />
               </a>
