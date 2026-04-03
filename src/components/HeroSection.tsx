@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-snowboard.jpg";
+import heroImage from "@/assets/Olimpiadas Torino 2006 008.jpg";
 import { ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
@@ -6,7 +6,7 @@ const HeroSection = () => {
     <section className="relative h-screen w-full overflow-hidden">
       <img
         src={heroImage}
-        alt="Snowboarder descendo montanha nevada ao pôr do sol"
+        alt="Jogos Olímpicos de Inverno, Torino 2006 — snowboard"
         className="absolute inset-0 w-full h-full object-cover"
         width={1920}
         height={1080}
