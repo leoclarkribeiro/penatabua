@@ -1,4 +1,4 @@
-import heroImage from "@/assets/Olimpiadas Torino 2006 008.jpg";
+import heroImage from "@/assets/Olimpiadas Torino 2006 008 NEW.jpg";
 import { ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
@@ -7,7 +7,7 @@ const HeroSection = () => {
       <img
         src={heroImage}
         alt="Jogos Olímpicos de Inverno, Torino 2006 — snowboard"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-top"
         width={1920}
         height={1080}
       />
