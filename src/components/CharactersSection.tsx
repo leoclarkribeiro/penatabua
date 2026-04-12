@@ -1,5 +1,6 @@
 import isabelPhoto from "@/assets/Isabel photo.jpg";
 import lucasPhoto from "@/assets/Lucas photo.jpg";
+import augustinhoPhoto from "@/assets/Augustinho photo.jpeg";
 import { cn } from "@/lib/utils";
 
 type Character = {
@@ -32,6 +33,8 @@ const characters: Character[] = [
     subtitle: "Nova geração",
     description:
       "Primeiro brasileiro a vencer uma etapa da Copa Continental (2025). Competidor no halfpipe em 2026.",
+    image: augustinhoPhoto,
+    imageAlt: "Augustinho Teixeira, snowboarder brasileiro",
   },
   {
     name: "Oskar Metsavaht",
