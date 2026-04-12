@@ -4,6 +4,7 @@ import augustinhoPhoto from "@/assets/Augustinho photo.jpeg";
 import vitoriaPhoto from "@/assets/Vitoria photo.jpeg";
 import oskarPhoto from "@/assets/Oskar_Metsavaht photo.jpg";
 import stefanoPhoto from "@/assets/Stefano_Arnhold photo.jpg";
+import karinaPhoto from "@/assets/KarinaOliani photo.jpg";
 import { cn } from "@/lib/utils";
 
 type Character = {
@@ -62,6 +63,14 @@ const characters: Character[] = [
       "Ex-Presidente da CBDN. A voz institucional do esporte de neve no Brasil.",
     image: stefanoPhoto,
     imageAlt: "Stefano Arnhold, ex-presidente da CBDN",
+  },
+  {
+    name: "Karina Oliani",
+    subtitle: "No topo do Everest",
+    description:
+      "Renomada médica brasileira, atleta de esportes extremos e apresentadora de TV premiada.",
+    image: karinaPhoto,
+    imageAlt: "Karina Oliani, médica, atleta de esportes extremos e apresentadora",
   },
 ];
 
