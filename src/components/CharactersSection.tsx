@@ -1,4 +1,5 @@
 import isabelPhoto from "@/assets/Isabel photo.jpg";
+import lucasPhoto from "@/assets/Lucas photo.jpg";
 import { cn } from "@/lib/utils";
 
 type Character = {
@@ -23,6 +24,8 @@ const characters: Character[] = [
     subtitle: "Herói olímpico",
     description:
       "Ouro no giant slalom em Milão-Cortina 2026 — primeira medalha de inverno do Brasil e da América do Sul.",
+    image: lucasPhoto,
+    imageAlt: "Lucas Pinheiro Braathen, esquiador brasileiro",
   },
   {
     name: "Augustinho Teixeira",
