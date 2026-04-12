@@ -1,9 +1,22 @@
-const characters = [
+import isabelPhoto from "@/assets/Isabel photo.jpg";
+import { cn } from "@/lib/utils";
+
+type Character = {
+  name: string;
+  subtitle: string;
+  description: string;
+  image?: string;
+  imageAlt?: string;
+};
+
+const characters: Character[] = [
   {
     name: "Isabel Clark",
     subtitle: "Pioneira e ícone",
     description:
       "Quatro participações olímpicas (2006, 2010, 2014, 2018). O rosto do snowboard brasileiro por duas décadas.",
+    image: isabelPhoto,
+    imageAlt: "Isabel Clark, snowboarder brasileira",
   },
   {
     name: "Lucas Pinheiro Braathen",
@@ -52,17 +65,48 @@ const CharactersSection = () => {
           {characters.map((char) => (
             <div
               key={char.name}
-              className="p-8 bg-card border border-border rounded-sm hover:border-primary/30 transition-colors group"
+              className={cn(
+                "bg-card border border-border rounded-sm hover:border-primary/30 transition-colors group",
+                char.image ? "p-8 md:p-10 md:col-span-2 lg:col-span-2" : "p-8",
+              )}
             >
-              <p className="font-body text-sm text-primary uppercase tracking-wider mb-2">
-                {char.subtitle}
-              </p>
-              <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4 normal-case">
-                {char.name}
-              </h3>
-              <p className="font-body text-muted-foreground leading-relaxed">
-                {char.description}
-              </p>
+              {char.image ? (
+                <div className="flex flex-col sm:flex-row sm:items-start gap-6 md:gap-8">
+                  <div className="shrink-0 w-full max-w-[13.5rem] sm:max-w-none sm:w-52 md:w-56 mx-auto sm:mx-0">
+                    <div className="overflow-hidden rounded-sm border border-border/70 bg-muted/20 aspect-[3/4]">
+                      <img
+                        src={char.image}
+                        alt={char.imageAlt ?? char.name}
+                        className="h-full w-full object-cover object-top"
+                        loading="lazy"
+                        width={540}
+                        height={720}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0 text-center sm:text-left">
+                    <p className="font-body text-sm text-primary uppercase tracking-wider mb-2">
+                      {char.subtitle}
+                    </p>
+                    <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4 normal-case">
+                      {char.name}
+                    </h3>
+                    <p className="font-body text-muted-foreground leading-relaxed">
+                      {char.description}
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <p className="font-body text-sm text-primary uppercase tracking-wider mb-2">
+                    {char.subtitle}
+                  </p>
+                  <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4 normal-case">
+                    {char.name}
+                  </h3>
+                  <p className="font-body text-muted-foreground leading-relaxed">{char.description}</p>
+                </>
+              )}
             </div>
           ))}
         </div>
