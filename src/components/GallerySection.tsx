@@ -19,7 +19,7 @@ const GallerySection = () => {
             Galeria
           </p>
           <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground">
-            Por trás das <span className="text-gradient-gold">Câmeras</span>
+            30 anos de <span className="text-gradient-gold">história</span>
           </h2>
         </div>
 
@@ -41,10 +41,6 @@ const GallerySection = () => {
             </div>
           ))}
         </div>
-
-        <p className="text-center font-body text-muted-foreground mt-8 text-sm">
-          Mais fotos em breve — acompanhe nosso conteúdo exclusivo dos bastidores.
-        </p>
       </div>
     </section>
   );
