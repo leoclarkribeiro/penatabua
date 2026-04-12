@@ -1,6 +1,8 @@
 import isabelPhoto from "@/assets/Isabel photo.jpg";
 import lucasPhoto from "@/assets/Lucas photo.jpg";
 import augustinhoPhoto from "@/assets/Augustinho photo.jpeg";
+import oskarPhoto from "@/assets/Oskar_Metsavaht photo.jpg";
+import stefanoPhoto from "@/assets/Stefano_Arnhold photo.jpg";
 import { cn } from "@/lib/utils";
 
 type Character = {
@@ -41,12 +43,16 @@ const characters: Character[] = [
     subtitle: "Empresário e visionário",
     description:
       "Fundador da Osklen, pioneiro em trazer o estilo de vida de montanha ao Brasil.",
+    image: oskarPhoto,
+    imageAlt: "Oskar Metsavaht, empresário e fundador da Osklen",
   },
   {
     name: "Stefano Arnhold",
     subtitle: "A voz institucional",
     description:
       "Ex-Presidente da CBDN. A voz institucional do esporte de neve no Brasil.",
+    image: stefanoPhoto,
+    imageAlt: "Stefano Arnhold, ex-presidente da CBDN",
   },
 ];
 
