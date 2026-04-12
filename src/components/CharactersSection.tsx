@@ -1,6 +1,7 @@
 import isabelPhoto from "@/assets/Isabel photo.jpg";
 import lucasPhoto from "@/assets/Lucas photo.jpg";
 import augustinhoPhoto from "@/assets/Augustinho photo.jpeg";
+import vitoriaPhoto from "@/assets/Vitoria photo.jpeg";
 import oskarPhoto from "@/assets/Oskar_Metsavaht photo.jpg";
 import stefanoPhoto from "@/assets/Stefano_Arnhold photo.jpg";
 import { cn } from "@/lib/utils";
@@ -37,6 +38,14 @@ const characters: Character[] = [
       "Primeiro brasileiro a vencer uma etapa da Copa Continental (2025). Competidor no halfpipe em 2026.",
     image: augustinhoPhoto,
     imageAlt: "Augustinho Teixeira, snowboarder brasileiro",
+  },
+  {
+    name: "Vitória Machado",
+    subtitle: "Jogos Paralímpicos",
+    description:
+      "Primeira mulher brasileira a competir no para-snowboard em Milão-Cortina 2026.",
+    image: vitoriaPhoto,
+    imageAlt: "Vitória Machado, para-snowboarder brasileira",
   },
   {
     name: "Oskar Metsavaht",
