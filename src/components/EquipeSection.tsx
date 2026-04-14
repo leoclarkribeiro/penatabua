@@ -9,7 +9,7 @@ const EquipeSection = () => {
             Créditos
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-10 text-center">
-            Equipe do <span className="text-gradient-gold">projeto</span>
+            <span className="text-gradient-gold">Equipe</span>
           </h2>
 
           <div className="space-y-4">
@@ -20,24 +20,23 @@ const EquipeSection = () => {
               </p>
             </div>
 
-            <div className="flex items-center gap-3 p-5 bg-card border border-border rounded-sm">
+            <div className="flex items-start gap-3 p-5 bg-card border border-border rounded-sm">
               <Building2 className="text-primary flex-shrink-0" size={20} />
-              <p className="font-body text-foreground/80">
-                <span className="text-primary font-medium">Produção executiva:</span> Gullane Entretenimento
-              </p>
+              <div className="font-body text-foreground/80">
+                <p>
+                  <span className="text-primary font-medium">Produção executiva:</span> Gullane Entretenimento
+                </p>
+                <a
+                  href="https://www.gullane.com.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:opacity-80 transition-opacity inline-block mt-1"
+                >
+                  https://www.gullane.com.br/
+                </a>
+              </div>
             </div>
           </div>
-
-          <p className="font-body text-center text-foreground/70 mt-8">
-            <a
-              href="https://www.gullane.com.br/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:opacity-80 transition-opacity"
-            >
-              https://www.gullane.com.br/
-            </a>
-          </p>
         </div>
       </div>
     </section>
