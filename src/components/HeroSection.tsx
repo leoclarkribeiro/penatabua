@@ -23,6 +23,7 @@ const HeroSection = () => {
           <a href="#personagens" className="font-body text-sm text-foreground/70 hover:text-primary transition-colors">Personagens</a>
           <a href="#gallery" className="font-body text-sm text-foreground/70 hover:text-primary transition-colors">Galeria</a>
           <a href="#parceiros" className="font-body text-sm text-foreground/70 hover:text-primary transition-colors">Parceiros</a>
+          <a href="#equipe" className="font-body text-sm text-foreground/70 hover:text-primary transition-colors">Equipe</a>
           <a href="#contato" className="font-display text-sm tracking-wider px-5 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all">
             Contato
           </a>
@@ -31,7 +32,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
         <p className="font-body text-sm md:text-base tracking-[0.3em] text-foreground/60 uppercase mb-4 animate-fade-in">
-          Proposta de Patrocínio · Documentário · 2026
+          Proposta de Patrocínio · Documentário · 90 MIN · 2026
         </p>
         <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-gradient-gold leading-none mb-6 animate-fade-in-up">
           Pé na Tábua

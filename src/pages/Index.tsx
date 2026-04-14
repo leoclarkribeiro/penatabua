@@ -6,6 +6,7 @@ import GallerySection from "@/components/GallerySection";
 import CinematicSection from "@/components/CinematicSection";
 import VideoSection from "@/components/VideoSection";
 import SponsorsSection from "@/components/SponsorsSection";
+import EquipeSection from "@/components/EquipeSection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
       <CinematicSection />
       <VideoSection />
       <SponsorsSection />
+      <EquipeSection />
       <FooterSection />
     </main>
   );
