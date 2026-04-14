@@ -5,6 +5,7 @@ import vitoriaPhoto from "@/assets/Vitoria photo.jpeg";
 import oskarPhoto from "@/assets/Oskar_Metsavaht photo.jpg";
 import stefanoPhoto from "@/assets/Stefano_Arnhold photo.jpg";
 import karinaPhoto from "@/assets/KarinaOliani photo.jpg";
+import pauloBarrosPhoto from "@/assets/Paulo Barros photo.jpg";
 import { cn } from "@/lib/utils";
 
 type Character = {
@@ -71,6 +72,14 @@ const characters: Character[] = [
       "Renomada médica brasileira, atleta de esportes extremos e apresentadora de TV premiada.",
     image: karinaPhoto,
     imageAlt: "Karina Oliani, médica, atleta de esportes extremos e apresentadora",
+  },
+  {
+    name: "Paulo Barros",
+    subtitle: "Neve na Sapucaí",
+    description:
+      "Em 2008, o carnavalesco da Unidos do Viradouro fez nevar no maior desfile de escola de samba do mundo.",
+    image: pauloBarrosPhoto,
+    imageAlt: "Paulo Barros, carnavalesco brasileiro",
   },
 ];
 
