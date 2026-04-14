@@ -91,18 +91,18 @@ const CharactersSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 max-w-6xl mx-auto">
           {characters.map((char) => (
             <div
               key={char.name}
               className={cn(
                 "bg-card border border-border rounded-sm hover:border-primary/30 transition-colors group",
-                char.image ? "p-8 md:p-10 md:col-span-2 lg:col-span-2" : "p-8",
+                char.image ? "p-8 md:p-10" : "p-8",
               )}
             >
               {char.image ? (
-                <div className="flex flex-col sm:flex-row sm:items-start gap-6 md:gap-8">
-                  <div className="shrink-0 w-full max-w-[13.5rem] sm:max-w-none sm:w-52 md:w-56 mx-auto sm:mx-0">
+                <div className="flex flex-col items-center gap-6 md:gap-8">
+                  <div className="shrink-0 w-full max-w-[13.5rem] md:max-w-[15rem] mx-auto">
                     <div className="overflow-hidden rounded-sm border border-border/70 bg-muted/20 aspect-[3/4]">
                       <img
                         src={char.image}
@@ -114,7 +114,7 @@ const CharactersSection = () => {
                       />
                     </div>
                   </div>
-                  <div className="flex-1 min-w-0 text-center sm:text-left">
+                  <div className="flex-1 min-w-0 text-center">
                     <p className="font-body text-sm text-primary uppercase tracking-wider mb-2">
                       {char.subtitle}
                     </p>
