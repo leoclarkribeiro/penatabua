@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import isabelPhoto from "@/assets/Isabel photo.jpg";
 import lucasPhoto from "@/assets/Lucas photo.jpg";
 import augustinhoPhoto from "@/assets/Augustinho photo.jpeg";
@@ -152,6 +153,15 @@ const CharactersSection = () => {
               )}
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 flex justify-center px-2">
+          <Link
+            to="/entrevistados"
+            className="font-display max-w-xl border border-primary px-6 py-4 text-center text-sm leading-snug tracking-wider text-primary transition-all hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:px-10 sm:text-base"
+          >
+            Clique aqui e confira a lista completa dos entrevistados
+          </Link>
         </div>
       </div>
     </section>
