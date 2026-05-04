@@ -14,22 +14,6 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-overlay" />
       <div className="absolute inset-0 bg-background/40" />
 
-      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-12 py-6">
-        <span className="font-display text-lg tracking-widest text-foreground uppercase">
-          Pé na Tábua
-        </span>
-        <div className="hidden md:flex items-center gap-8">
-          <a href="#historia" className="font-body text-sm text-foreground/70 hover:text-primary transition-colors">A História</a>
-          <a href="#personagens" className="font-body text-sm text-foreground/70 hover:text-primary transition-colors">Personagens</a>
-          <a href="#gallery" className="font-body text-sm text-foreground/70 hover:text-primary transition-colors">Galeria</a>
-          <a href="#parceiros" className="font-body text-sm text-foreground/70 hover:text-primary transition-colors">Parceiros</a>
-          <a href="#equipe" className="font-body text-sm text-foreground/70 hover:text-primary transition-colors">Equipe</a>
-          <a href="#contato" className="font-display text-sm tracking-wider px-5 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all">
-            Contato
-          </a>
-        </div>
-      </nav>
-
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
         <p className="font-body text-sm md:text-base tracking-[0.3em] text-foreground/60 uppercase mb-4 animate-fade-in">
           Proposta de Patrocínio · Documentário · 90 MIN · 2026
