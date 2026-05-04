@@ -1,16 +1,21 @@
+import { useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import { gruposEntrevistados } from "@/data/entrevistados";
 
 const Entrevistados = () => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="min-h-screen bg-background pb-24 pt-24 md:pt-28">
       <SiteHeader />
 
       <div className="container mx-auto px-6 md:px-12">
         <Link
-          to="/"
+          to="/#personagens"
           className="group mb-10 inline-flex items-center gap-2 font-body text-sm text-primary transition-colors hover:text-primary/80 md:text-base"
         >
           <ArrowLeft className="h-4 w-4 shrink-0 transition-transform group-hover:-translate-x-0.5" aria-hidden />
@@ -20,14 +25,11 @@ const Entrevistados = () => {
         <header className="mx-auto max-w-3xl text-center">
           <p className="font-body mb-4 text-sm uppercase tracking-[0.3em] text-primary">Pé na Tábua</p>
           <h1 className="font-display text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-            Lista completa dos <span className="text-gradient-gold">entrevistados</span>
+            Lista <span className="text-gradient-gold">em andamento</span>
           </h1>
-          <p className="font-body mx-auto mt-6 max-w-2xl text-lg text-foreground/70">
-            Nomes organizados por categoria, conforme a produção do documentário.
-          </p>
         </header>
 
-        <div className="mx-auto mt-16 max-w-5xl space-y-16">
+        <div className="mx-auto mt-12 max-w-5xl space-y-16 md:mt-16">
           {gruposEntrevistados.map((grupo) => (
             <section key={grupo.id} aria-labelledby={`grupo-${grupo.id}`}>
               <h2
@@ -76,7 +78,7 @@ const Entrevistados = () => {
 
         <div className="mx-auto mt-20 flex max-w-5xl justify-center border-t border-border pt-12">
           <Link
-            to="/"
+            to="/#personagens"
             className="font-display inline-flex items-center gap-2 border border-primary px-8 py-3 text-sm tracking-wider text-primary transition-all hover:bg-primary hover:text-primary-foreground"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden />

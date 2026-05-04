@@ -14,21 +14,6 @@ export type GrupoEntrevistados = {
 
 export const gruposEntrevistados: GrupoEntrevistados[] = [
   {
-    id: "famosos",
-    titulo: "Famosos",
-    pessoas: [
-      { nome: "Cynthia Howlett", titulo: "Apresentadora", local: "RJ" },
-      { nome: "Dani Monteiro", titulo: "Apresentadora", local: "RJ" },
-      { nome: "Juliana Veiga", titulo: "Apresentadora", local: "SP" },
-      { nome: "Luciano Huck", titulo: "Apresentador", local: "RJ" },
-      { nome: "Marcio Garcia", titulo: "Ator", local: "RJ" },
-      { nome: "Paulo Lima", titulo: "Empresário", local: "SP" },
-      { nome: "Rodrigo Santoro", titulo: "Ator", local: "RJ" },
-      { nome: "Paulo Barros", titulo: "Viradouro", local: "RJ" },
-      { nome: "Lucas Pinheiro", titulo: "Medalha ouro Ski", local: "SP?" },
-    ],
-  },
-  {
     id: "principais",
     titulo: "Principais",
     pessoas: [
@@ -89,6 +74,21 @@ export const gruposEntrevistados: GrupoEntrevistados[] = [
       { nome: "Paula Vitoria", titulo: "Mãe da atleta", local: "RS" },
       { nome: "Zion", titulo: "Atleta", local: "SC" },
       { nome: "Noah", titulo: "Atleta", local: "SC" },
+    ],
+  },
+  {
+    id: "famosos",
+    titulo: "Famosos",
+    pessoas: [
+      { nome: "Cynthia Howlett", titulo: "Apresentadora", local: "RJ" },
+      { nome: "Dani Monteiro", titulo: "Apresentadora", local: "RJ" },
+      { nome: "Juliana Veiga", titulo: "Apresentadora", local: "SP" },
+      { nome: "Luciano Huck", titulo: "Apresentador", local: "RJ" },
+      { nome: "Marcio Garcia", titulo: "Ator", local: "RJ" },
+      { nome: "Paulo Lima", titulo: "Empresário", local: "SP" },
+      { nome: "Rodrigo Santoro", titulo: "Ator", local: "RJ" },
+      { nome: "Paulo Barros", titulo: "Viradouro", local: "RJ" },
+      { nome: "Lucas Pinheiro", titulo: "Medalha ouro Ski", local: "SP?" },
     ],
   },
   {

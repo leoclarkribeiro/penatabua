@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import SiteHeader from "@/components/SiteHeader";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -11,6 +13,17 @@ import EquipeSection from "@/components/EquipeSection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const id = location.hash.replace(/^#/, "");
+    if (!id) return;
+    const raf = window.requestAnimationFrame(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    return () => window.cancelAnimationFrame(raf);
+  }, [location.pathname, location.hash]);
+
   return (
     <main className="bg-background min-h-screen">
       <SiteHeader />
