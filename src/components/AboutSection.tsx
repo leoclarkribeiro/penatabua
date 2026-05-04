@@ -52,16 +52,17 @@ const AboutSection = () => {
             <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4 text-center">
               Narrativa
             </p>
-            <p className="font-body text-foreground/80 text-lg leading-relaxed text-center mb-6">
+            <p className="font-body text-foreground/80 text-lg leading-relaxed text-center mb-4">
               A história começa em 1994 na reunião da FIS no Rio de Janeiro onde o snowboard foi incluído
               nos Jogos de Inverno. Em 1995, nasce o Campeonato Brasileiro de Snowboard. Acompanhamos
               pioneiros que viajaram o mundo com suas pranchas: atletas que bancaram o próprio sonho, e a
               profissionalização através da CBDN.
-              E mais: o boom do turismo brasileiro na neve, famílias
-              brasileiras trocando o clima tropical pelas montanhas e criando raízes em resorts de inverno,
-              uma estação de neve artificial em Gramado (RS), eventos de neve no Rio de Janeiro e São Paulo,
-              incluindo um desfile de samba na Sapucaí com uma rampa de neve e a consagração olímpica de
-              2026.
+            </p>
+            <p className="font-body text-foreground/80 text-lg leading-relaxed text-center mb-6">
+              E mais: o boom do turismo brasileiro na neve, famílias brasileiras trocando o clima tropical
+              pelas montanhas e criando raízes em resorts de inverno, uma estação de neve artificial em
+              Gramado (RS), eventos de neve no Rio de Janeiro e São Paulo, incluindo um desfile de samba na
+              Sapucaí com uma rampa de neve e a consagração olímpica de 2026.
             </p>
             <p className="font-body text-foreground/80 text-xl leading-relaxed italic text-center">
               O arco dramático é claro: de improvável à inevitável.
