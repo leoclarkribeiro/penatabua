@@ -16,7 +16,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
         <p className="font-body text-sm md:text-base tracking-[0.3em] text-foreground/60 uppercase mb-4 animate-fade-in">
-          Proposta de Patrocínio · Documentário · 90 MIN · 2026
+          Documentário · 90 MIN · 2026
         </p>
         <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-gradient-gold leading-none mb-6 animate-fade-in-up">
           Pé na Tábua
