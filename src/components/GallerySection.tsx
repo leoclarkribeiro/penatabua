@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { CarouselApi } from "@/components/ui/carousel";
@@ -22,7 +22,6 @@ const GallerySection = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [zoomIndex, setZoomIndex] = useState<number | null>(null);
-  const dotRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 768px)");
@@ -77,20 +76,6 @@ const GallerySection = () => {
     return () => window.removeEventListener("keydown", onKey);
   }, [zoomOpen, goZoomPrev, goZoomNext]);
 
-  useEffect(() => {
-    if (!zoomOpen || zoomIndex === null) return;
-    const el = dotRefs.current[zoomIndex];
-    el?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-  }, [zoomOpen, zoomIndex]);
-
-  const handleDotClick = (i: number) => {
-    if (zoomIndex === i) {
-      setZoomIndex(null);
-    } else {
-      setZoomIndex(i);
-    }
-  };
-
   return (
     <section id="gallery" className="py-24 md:py-32">
       <div className="container mx-auto px-6 md:px-12">
@@ -142,33 +127,39 @@ const GallerySection = () => {
               ))}
             </CarouselContent>
 
-            <CarouselPrevious
-              variant="outline"
-              aria-label="Página anterior da galeria"
-              className="left-0 top-1/2 z-10 h-10 w-10 -translate-y-1/2 border-primary text-primary hover:bg-primary hover:text-primary-foreground disabled:opacity-40 md:left-1"
-            />
-            <CarouselNext
-              variant="outline"
-              aria-label="Próxima página da galeria"
-              className="right-0 top-1/2 z-10 h-10 w-10 -translate-y-1/2 border-primary text-primary hover:bg-primary hover:text-primary-foreground disabled:opacity-40 md:right-1"
-            />
+            {!zoomOpen && (
+              <>
+                <CarouselPrevious
+                  variant="outline"
+                  aria-label="Página anterior da galeria"
+                  className="left-0 top-1/2 z-10 h-10 w-10 -translate-y-1/2 border-primary text-primary hover:bg-primary hover:text-primary-foreground disabled:opacity-40 md:left-1"
+                />
+                <CarouselNext
+                  variant="outline"
+                  aria-label="Próxima página da galeria"
+                  className="right-0 top-1/2 z-10 h-10 w-10 -translate-y-1/2 border-primary text-primary hover:bg-primary hover:text-primary-foreground disabled:opacity-40 md:right-1"
+                />
+              </>
+            )}
           </Carousel>
 
-          <nav className="mt-8 flex flex-wrap items-center justify-center gap-2" aria-label="Navegação da galeria">
-            {Array.from({ length: snapCount }, (_, i) => (
-              <button
-                key={i}
-                type="button"
-                aria-label={`Página ${i + 1} de ${snapCount}`}
-                aria-current={current === i ? "true" : undefined}
-                className={cn(
-                  "h-2.5 w-2.5 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-                  current === i ? "bg-primary" : "bg-muted-foreground/35 hover:bg-muted-foreground/60",
-                )}
-                onClick={() => api?.scrollTo(i)}
-              />
-            ))}
-          </nav>
+          {!zoomOpen && (
+            <nav className="mt-8 flex flex-wrap items-center justify-center gap-2" aria-label="Navegação da galeria">
+              {Array.from({ length: snapCount }, (_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  aria-label={`Página ${i + 1} de ${snapCount}`}
+                  aria-current={current === i ? "true" : undefined}
+                  className={cn(
+                    "h-2.5 w-2.5 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                    current === i ? "bg-primary" : "bg-muted-foreground/35 hover:bg-muted-foreground/60",
+                  )}
+                  onClick={() => api?.scrollTo(i)}
+                />
+              ))}
+            </nav>
+          )}
         </div>
       </div>
 
@@ -184,25 +175,10 @@ const GallerySection = () => {
           >
             <DialogTitle className="sr-only">Imagem ampliada da galeria</DialogTitle>
             <DialogDescription className="sr-only">
-              Setas esquerda e direita para navegar entre fotos. Clique no ponto da foto atual ou pressione
-              Esc para sair. Clique em outro ponto para ir àquela foto.
+              Use as setas para navegar entre as fotos ou Esc para sair da visualização ampliada.
             </DialogDescription>
 
-            <div className="pointer-events-auto flex justify-end p-3 md:p-4">
-              <DialogPrimitive.Close asChild>
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="icon"
-                  className="h-10 w-10 shrink-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  aria-label="Fechar galeria ampliada"
-                >
-                  <X className="h-5 w-5" />
-                </Button>
-              </DialogPrimitive.Close>
-            </div>
-
-            <div className="pointer-events-none flex min-h-0 flex-1 items-center justify-center px-12 py-2 md:px-20">
+            <div className="pointer-events-none relative flex min-h-0 flex-1 items-center justify-center px-12 py-4 md:px-20 md:py-6">
               <Button
                 type="button"
                 variant="outline"
@@ -215,14 +191,27 @@ const GallerySection = () => {
                 <ChevronLeft className="h-6 w-6" />
               </Button>
 
-              <div className="pointer-events-auto flex max-h-[min(82vh,calc(100dvh-10rem))] max-w-[min(96vw,calc(100vw-7rem))] items-center justify-center">
+              <div className="pointer-events-auto relative inline-flex max-h-[min(82vh,calc(100dvh-8rem))] max-w-[min(96vw,calc(100vw-7rem))] items-center justify-center">
                 {zoomIndex !== null && galleryImageItems[zoomIndex] && (
-                  <img
-                    src={galleryImageItems[zoomIndex].src}
-                    alt={galleryImageItems[zoomIndex].alt}
-                    className="max-h-[min(82vh,calc(100dvh-10rem))] max-w-full object-contain shadow-2xl"
-                    decoding="async"
-                  />
+                  <>
+                    <DialogPrimitive.Close asChild>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="icon"
+                        className="absolute left-2 top-2 z-20 h-9 w-9 border-primary bg-black/50 text-primary backdrop-blur-sm hover:bg-primary hover:text-primary-foreground md:left-3 md:top-3 md:h-10 md:w-10"
+                        aria-label="Fechar galeria ampliada"
+                      >
+                        <X className="h-4 w-4 md:h-5 md:w-5" />
+                      </Button>
+                    </DialogPrimitive.Close>
+                    <img
+                      src={galleryImageItems[zoomIndex].src}
+                      alt={galleryImageItems[zoomIndex].alt}
+                      className="max-h-[min(82vh,calc(100dvh-8rem))] max-w-full object-contain shadow-2xl"
+                      decoding="async"
+                    />
+                  </>
                 )}
               </div>
 
@@ -239,37 +228,11 @@ const GallerySection = () => {
               </Button>
             </div>
 
-            <nav
-              className="pointer-events-auto max-h-[30vh] shrink-0 border-t border-white/10 bg-black/40 px-2 py-3 md:py-4"
-              aria-label="Fotos da galeria ampliada"
-            >
-              <p className="mb-2 text-center font-body text-xs text-white/60 md:text-sm">
-                Clique no ponto <span className="text-primary">ativo</span> para sair, ou em outro ponto para
-                ir à foto · <kbd className="rounded border border-white/20 px-1">Esc</kbd> fecha
+            <div className="pointer-events-auto shrink-0 border-t border-white/10 bg-black/40 px-4 py-3 md:py-4">
+              <p className="text-center font-body text-xs text-white/75 md:text-sm">
+                Use setas para navegar ou Esc para sair
               </p>
-              <div className="mx-auto flex max-w-5xl gap-1.5 overflow-x-auto overflow-y-hidden py-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                {galleryImageItems.map((_, i) => (
-                  <button
-                    key={i}
-                    ref={(el) => {
-                      dotRefs.current[i] = el;
-                    }}
-                    type="button"
-                    aria-label={
-                      zoomIndex === i
-                        ? `Foto ${i + 1} de ${total} (clique para fechar)`
-                        : `Ir para foto ${i + 1} de ${total}`
-                    }
-                    aria-current={zoomIndex === i ? "true" : undefined}
-                    className={cn(
-                      "h-2.5 w-2.5 shrink-0 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black",
-                      zoomIndex === i ? "bg-primary ring-2 ring-primary/50" : "bg-white/35 hover:bg-white/60",
-                    )}
-                    onClick={() => handleDotClick(i)}
-                  />
-                ))}
-              </div>
-            </nav>
+            </div>
           </DialogPrimitive.Content>
         </DialogPortal>
       </Dialog>
