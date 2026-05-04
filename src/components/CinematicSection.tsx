@@ -9,6 +9,9 @@ const whatYouWillSee = [
   "A explosão do turismo de neve: brasileiros representam mais de 70% dos visitantes em algumas estações chilenas, no Colorado e nos Alpes europeus.",
   "Eventos de neve em São Paulo e no Rio e o Snowland em Gramado, RS.",
   "Programas de intercâmbio que revelam novos talentos, treinando em estações como Aspen, que mantém instrutores brasileiros devido à alta demanda por português entre turistas brasileiros.",
+  "Snowboard vs. Ski - Parceiros ou rivais?",
+  "O que leva alguém a querer surfar montanhas? Atividade Espiritual?",
+  "E muito mais.",
 ];
 
 const CinematicSection = () => {
@@ -18,7 +21,7 @@ const CinematicSection = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4">
-              Sobre o projeto
+              Imagens de arquivo
             </p>
             <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground">
               O que você vai <span className="text-gradient-gold">ver</span>
