@@ -17,23 +17,23 @@ const AboutSection = () => {
 
       <div className="relative z-10 container mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
-          <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4">
+          <p className="font-body text-center text-sm tracking-[0.3em] text-primary uppercase mb-4">
             A oportunidade
           </p>
-          <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-8 leading-tight">
+          <h2 className="font-display text-center text-4xl md:text-6xl font-bold text-foreground mb-8 leading-tight">
             Um momento <span className="text-gradient-gold">histórico</span>
           </h2>
-          <p className="font-body text-foreground/70 text-lg leading-relaxed mb-16 max-w-3xl">
+          <p className="font-body mx-auto max-w-3xl text-center text-lg leading-relaxed text-foreground/70 mb-16">
             O Brasil vive um momento sem precedentes nos esportes de inverno. Em 2026, Lucas Pinheiro
             Braathen conquistou o primeiro ouro olímpico de inverno da história brasileira e da América
             do Sul. Ao mesmo tempo, cerca de 10 milhões de brasileiros viajaram ao exterior em 2025,
             muitos em busca de neve, e o interesse por esportes de inverno cresce entre 10% e 15% ao ano.
           </p>
 
-          <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4">
+          <p className="font-body text-center text-sm tracking-[0.3em] text-primary uppercase mb-4">
             Sobre o projeto
           </p>
-          <h3 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
+          <h3 className="font-display text-center text-3xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
             O <span className="text-gradient-gold">documentário</span>
           </h3>
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
