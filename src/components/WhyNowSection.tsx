@@ -1,10 +1,12 @@
+import { Snowflake } from "lucide-react";
+
 const reasons = [
-  "❄ O Brasil conquistou seu primeiro ouro olímpico de inverno.",
-  "❄ CBDN é a referência em administração dos esportes de neve na América do Sul.",
-  "❄ Nova geração de atletas competindo em alto nível internacional.",
-  "❄ Consolidação do Brasileiro como principal turista em algumas estações no Chile, Argentina, EUA e Europa.",
-  "❄ Aspen contrata instrutores brasileiros para atender à demanda de aulas em português.",
-  "❄ Nas famílias brasileiras que vivem na neve, a nova geração está crescendo como nativos dos esportes de inverno.",
+  "O Brasil conquistou seu primeiro ouro olímpico de inverno.",
+  "CBDN é a referência em administração dos esportes de neve na América do Sul.",
+  "Nova geração de atletas competindo em alto nível internacional.",
+  "Consolidação do Brasileiro como principal turista em algumas estações no Chile, Argentina, EUA e Europa.",
+  "Aspen contrata instrutores brasileiros para atender à demanda de aulas em português.",
+  "Nas famílias brasileiras que vivem na neve, a nova geração está crescendo como nativos dos esportes de inverno.",
 ];
 
 const WhyNowSection = () => {
@@ -26,8 +28,9 @@ const WhyNowSection = () => {
             {reasons.map((reason, i) => (
               <div
                 key={i}
-                className="p-6 bg-background border border-border rounded-sm hover:border-primary/30 transition-colors"
+                className="flex items-start gap-4 p-6 bg-background border border-border rounded-sm hover:border-primary/30 transition-colors"
               >
+                <Snowflake className="mt-1 h-5 w-5 flex-shrink-0 text-primary" aria-hidden />
                 <p className="font-body text-foreground/80 text-lg leading-relaxed">{reason}</p>
               </div>
             ))}
