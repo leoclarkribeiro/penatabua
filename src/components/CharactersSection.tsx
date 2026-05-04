@@ -94,10 +94,14 @@ const CharactersSection = () => {
           <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground">
             Histórias <span className="text-gradient-gold">humanas</span>
           </h2>
-          <p className="font-body text-foreground/70 text-lg mt-6 max-w-2xl mx-auto">
-            O documentário é construído em torno de histórias humanas reais. Atletas que abriram mão da
-            estabilidade para perseguir um sonho na neve.
-          </p>
+          <div className="mx-auto mt-6 max-w-2xl space-y-4 text-center">
+            <p className="font-body text-lg text-foreground/70">
+              O documentário é construído em torno de histórias humanas reais.
+            </p>
+            <p className="font-body text-lg text-foreground/70">
+              Brasileiros que abriram mão da vida nos trópicos para perseguir um sonho na neve.
+            </p>
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 max-w-6xl mx-auto">
