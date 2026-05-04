@@ -6,7 +6,6 @@ const brandValues = [
   "Inovação",
   "Performance",
   "Juventude",
-  "Estilo de vida aspiracional",
   "Mobilidade global",
 ];
 
@@ -21,6 +20,10 @@ const partners = [
   {
     name: "CBDN",
     desc: "Confederação Brasileira de Desportos na Neve",
+  },
+  {
+    name: "COB",
+    desc: "Comitê Olímpico do Brasil",
   },
   {
     name: "FIS",
@@ -45,7 +48,7 @@ const SponsorsSection = () => {
           </h2>
           <p className="font-body text-foreground/70 text-lg text-center leading-relaxed mb-10">
             Pé na Tábua dialoga com valores centrais de grandes empresas brasileiras. O snowboard conecta
-            surf, skate, música, moda e viagem, onde marcas constroem desejo.
+            surf, skate, música, moda e viagem.
           </p>
           <div className="grid sm:grid-cols-2 gap-3 mb-10">
             {brandValues.map((v) => (
@@ -84,8 +87,8 @@ const SponsorsSection = () => {
           <p className="font-body text-foreground/80 text-lg leading-relaxed text-center">
             Brasileiros entre 20 e 50 anos, com renda para viagens internacionais, apaixonados por estilo
             de vida ativo e aventura. Famílias que viajam ao exterior pelo menos uma vez por ano. Jovens
-            que buscam referências além do futebol. Conectados, aspiracionais e abertos a novas
-            experiências. Este é exatamente o consumidor que grandes marcas brasileiras querem alcançar.
+            que buscam referências além do futebol. Conectados e abertos a novas experiências. Este é
+            exatamente o consumidor que grandes marcas brasileiras querem alcançar.
           </p>
         </div>
 
@@ -144,15 +147,6 @@ const SponsorsSection = () => {
               Conteúdo para redes sociais e extensão da narrativa além da tela.
             </p>
           </div>
-        </div>
-
-        <div className="text-center">
-          <a
-            href="#contato"
-            className="inline-block font-display text-sm tracking-widest uppercase px-10 py-4 bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
-          >
-            Solicitar Proposta de Patrocínio
-          </a>
         </div>
       </div>
     </section>

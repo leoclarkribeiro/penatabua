@@ -9,12 +9,9 @@ const FooterSection = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Entre em <span className="text-gradient-gold">Contato</span>
             </h2>
-            <p className="font-body text-foreground/70 text-lg mb-6 max-w-md">
-              Interessado em patrocinar, exibir ou colaborar? Adoraríamos ouvir de você.
-            </p>
             <div className="space-y-3 mb-6">
               <p className="font-body text-foreground/80">
                 <span className="text-primary font-medium">Leo Clark</span> · Diretor
