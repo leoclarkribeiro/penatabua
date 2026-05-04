@@ -1,13 +1,10 @@
-import { Snowflake } from "lucide-react";
-
 const reasons = [
-  "Primeiro ouro olímpico de inverno do Brasil e da América do Sul (2026).",
-  "Crescimento recorde do turismo brasileiro para destinos de neve.",
-  "Nova geração de atletas competindo em alto nível internacional.",
-  "Consolidação do Brasil como principal público latino nas estações do Chile, da Argentina, dos EUA e da Europa.",
-  "Crescimento de 37% no turismo internacional em 2025.",
-  "70%+ de ocupação brasileira nas estações de ski no Chile.",
-  "Interesse em esportes de neve está crescendo 10–15% ao ano no Brasil.",
+  "❄ O Brasil conquistou seu primeiro ouro olímpico de inverno.",
+  "❄ CBDN é a referência em administração dos esportes de neve na América do Sul.",
+  "❄ Nova geração de atletas competindo em alto nível internacional.",
+  "❄ Consolidação do Brasileiro como principal turista em algumas estações no Chile, Argentina, EUA e Europa.",
+  "❄ Aspen contrata instrutores brasileiros para atender à demanda de aulas em português.",
+  "❄ Nas famílias brasileiras que vivem na neve, a nova geração está crescendo como nativos dos esportes de inverno.",
 ];
 
 const WhyNowSection = () => {
@@ -29,9 +26,8 @@ const WhyNowSection = () => {
             {reasons.map((reason, i) => (
               <div
                 key={i}
-                className="flex items-start gap-4 p-6 bg-background border border-border rounded-sm hover:border-primary/30 transition-colors"
+                className="p-6 bg-background border border-border rounded-sm hover:border-primary/30 transition-colors"
               >
-                <Snowflake className="text-primary mt-1 flex-shrink-0" size={20} />
                 <p className="font-body text-foreground/80 text-lg leading-relaxed">{reason}</p>
               </div>
             ))}
