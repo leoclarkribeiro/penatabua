@@ -26,10 +26,6 @@ const partners = [
     desc: "Comitê Olímpico do Brasil",
   },
   {
-    name: "FIS",
-    desc: "Federação Internacional de Ski e Snowboard",
-  },
-  {
     name: "Osklen",
     desc: "Primeira marca de luxo global brasileira",
   },

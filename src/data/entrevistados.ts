@@ -45,6 +45,7 @@ export const gruposEntrevistados: GrupoEntrevistados[] = [
       { nome: "Leonardo Metsavaht", titulo: "Médico", local: "RJ" },
       { nome: "Leonardo Oliveira", titulo: "Empresário", local: "RJ" },
       { nome: "Lucas", titulo: "Atleta", local: "SP" },
+      { nome: "Manoela Penna", titulo: "COB", local: "RJ" },
       { nome: "Marcelo Apovian", titulo: "Empresário", local: "SP" },
       { nome: "Marco Olm", titulo: "Instrutor de snowboard", local: "SP" },
       { nome: "Marcos Batista", titulo: "Atleta", local: "Japão" },
