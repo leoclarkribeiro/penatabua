@@ -59,9 +59,9 @@ const characters: Character[] = [
   },
   {
     name: "Stefano Arnhold",
-    subtitle: "A voz institucional",
+    subtitle: "O Brasil que deu certo",
     description:
-      "Ex-Presidente da CBDN. A voz institucional do esporte de neve no Brasil.",
+      "Ex-Presidente da CBDN. O Brasil em posição de destaque na Federação Internacional de Ski.",
     image: stefanoPhoto,
     imageAlt: "Stefano Arnhold, ex-presidente da CBDN",
   },
