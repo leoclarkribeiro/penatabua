@@ -1,8 +1,30 @@
-import { Mail, Twitter, Youtube } from "lucide-react";
+import { Mail, Youtube } from "lucide-react";
 
-const FOOTER_EMAIL_HREF = "mailto:penatabua.snow@gmail.com";
+const FOOTER_EMAIL = "penatabua.snow@gmail.com";
+const FOOTER_EMAIL_GMAIL_HREF = `https://mail.google.com/mail/?view=cm&fs=1&to=${FOOTER_EMAIL}`;
+const FOOTER_EMAIL_MAILTO_HREF = `mailto:${FOOTER_EMAIL}`;
+
+const XLogo = ({ size = 22 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden
+  >
+    <path d="M18.244 2H21.5l-7.11 8.13L22.75 22h-6.54l-5.12-6.7L5.2 22H1.95l7.6-8.68L1.5 2h6.7l4.63 6.11L18.244 2Zm-1.14 18h1.8L7.23 3.9H5.3L17.104 20Z" />
+  </svg>
+);
 
 const FooterSection = () => {
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const popup = window.open(FOOTER_EMAIL_GMAIL_HREF, "_blank", "noopener,noreferrer");
+    if (!popup) {
+      window.location.href = FOOTER_EMAIL_MAILTO_HREF;
+    }
+  };
+
   return (
     <footer id="contato" className="py-16 md:py-24 border-t border-border">
       <div className="container mx-auto px-6 md:px-12">
@@ -13,10 +35,10 @@ const FooterSection = () => {
             </h2>
             <div className="flex items-center gap-6">
               <a
-                href={FOOTER_EMAIL_HREF || "#"}
-                onClick={FOOTER_EMAIL_HREF ? undefined : (e) => e.preventDefault()}
+                href={FOOTER_EMAIL_MAILTO_HREF}
+                onClick={handleEmailClick}
                 className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label={FOOTER_EMAIL_HREF ? "Enviar e-mail" : "E-mail em breve"}
+                aria-label="Enviar e-mail"
               >
                 <Mail size={22} />
               </a>
@@ -28,9 +50,9 @@ const FooterSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="X (Twitter) do Pé na Tábua"
+                aria-label="X do Pé na Tábua"
               >
-                <Twitter size={22} />
+                <XLogo size={22} />
               </a>
             </div>
           </div>
