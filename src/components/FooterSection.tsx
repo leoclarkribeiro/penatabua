@@ -19,8 +19,11 @@ const XLogo = ({ size = 22 }: { size?: number }) => (
 const FooterSection = () => {
   const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const popup = window.open(FOOTER_EMAIL_GMAIL_HREF, "_blank", "noopener,noreferrer");
-    if (!popup) {
+    const popup = window.open(FOOTER_EMAIL_GMAIL_HREF, "_blank");
+    if (popup) {
+      popup.opener = null;
+      popup.focus();
+    } else {
       window.location.href = FOOTER_EMAIL_MAILTO_HREF;
     }
   };
@@ -35,7 +38,7 @@ const FooterSection = () => {
             </h2>
             <div className="flex items-center gap-6">
               <a
-                href={FOOTER_EMAIL_MAILTO_HREF}
+                href={FOOTER_EMAIL_GMAIL_HREF}
                 onClick={handleEmailClick}
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Enviar e-mail"
