@@ -1,4 +1,4 @@
-import { Award, Globe, Tv, Mountain, Sparkles, Users } from "lucide-react";
+import { Award, Sparkles, Users } from "lucide-react";
 
 const brandValues = [
   "Espírito pioneiro",
@@ -81,10 +81,9 @@ const SponsorsSection = () => {
             </p>
           </div>
           <p className="font-body text-foreground/80 text-lg leading-relaxed text-center">
-            Brasileiros entre 20 e 50 anos, com renda para viagens internacionais, apaixonados por estilo
-            de vida ativo e aventura. Famílias que viajam ao exterior pelo menos uma vez por ano. Jovens
-            que buscam referências além do futebol. Conectados e abertos a novas experiências. Este é
-            exatamente o consumidor que grandes marcas brasileiras querem alcançar.
+            Brasileiros entre 20 e 50 anos, com orçamento para viagens internacionais, apaixonados por
+            estilo de vida ativo e aventura. Famílias que viajam ao exterior pelo menos uma vez por ano.
+            Jovens que buscam referências além do futebol. Conectados e abertos a novas experiências.
           </p>
         </div>
 
@@ -109,41 +108,6 @@ const SponsorsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mb-12">
-          <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4">
-            Alcance
-          </p>
-          <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-            Canais de <span className="text-gradient-gold">distribuição</span>
-          </h3>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
-          <div className="flex items-start gap-4 p-6 bg-card border border-border rounded-sm">
-            <Tv className="text-primary mt-1 flex-shrink-0" size={24} />
-            <p className="font-body text-foreground/80 leading-relaxed">
-              Streaming, canais esportivos e culturais, e exibição temática em estações de neve.
-            </p>
-          </div>
-          <div className="flex items-start gap-4 p-6 bg-card border border-border rounded-sm">
-            <Award className="text-primary mt-1 flex-shrink-0" size={24} />
-            <p className="font-body text-foreground/80 leading-relaxed">
-              Festivais nacionais e internacionais de cinema documentário.
-            </p>
-          </div>
-          <div className="flex items-start gap-4 p-6 bg-card border border-border rounded-sm">
-            <Globe className="text-primary mt-1 flex-shrink-0" size={24} />
-            <p className="font-body text-foreground/80 leading-relaxed">
-              Presença global alinhada ao público brasileiro nas principais regiões de neve.
-            </p>
-          </div>
-          <div className="flex items-start gap-4 p-6 bg-card border border-border rounded-sm">
-            <Mountain className="text-primary mt-1 flex-shrink-0" size={24} />
-            <p className="font-body text-foreground/80 leading-relaxed">
-              Conteúdo para redes sociais e extensão da narrativa além da tela.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
