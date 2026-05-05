@@ -21,7 +21,7 @@ const CinematicSection = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <p className="font-body text-sm tracking-[0.3em] text-primary uppercase mb-4">
-              Imagens de arquivo
+              Destaques
             </p>
             <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground">
               O que você vai <span className="text-gradient-gold">ver</span>

@@ -73,7 +73,7 @@ const VideoSection = () => {
     <section id="video" className="bg-card py-24 md:py-32">
       <div className="container mx-auto px-6 md:px-12">
         <div className="mb-12 text-center md:mb-16">
-          <p className="font-body mb-4 text-sm uppercase tracking-[0.3em] text-primary">Assista</p>
+          <p className="font-body mb-4 text-sm uppercase tracking-[0.3em] text-primary">Arquivo</p>
           <h2 className="font-display text-3xl font-bold tracking-wide md:text-5xl lg:text-6xl">
             <span className="text-foreground">VÍDEOS NO </span>
             <span className="text-gradient-gold">YOUTUBE</span>
