@@ -1,7 +1,6 @@
-import { Mail, Youtube } from "lucide-react";
+import { Mail, Twitter, Youtube } from "lucide-react";
 
-/** Set to e.g. `mailto:you@example.com` when ready. */
-const FOOTER_EMAIL_HREF = "";
+const FOOTER_EMAIL_HREF = "mailto:penatabua.snow@gmail.com";
 
 const FooterSection = () => {
   return (
@@ -12,11 +11,6 @@ const FooterSection = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Entre em <span className="text-gradient-gold">Contato</span>
             </h2>
-            <div className="space-y-3 mb-6">
-              <p className="font-body text-foreground/80">
-                <span className="text-primary font-medium">Leo Clark</span> · Diretor
-              </p>
-            </div>
             <div className="flex items-center gap-6">
               <a
                 href={FOOTER_EMAIL_HREF || "#"}
@@ -28,6 +22,15 @@ const FooterSection = () => {
               </a>
               <a href="https://youtube.com/@LeoClarkPéNaTábua" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Youtube size={22} />
+              </a>
+              <a
+                href="https://x.com/PeNaTabua"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="X (Twitter) do Pé na Tábua"
+              >
+                <Twitter size={22} />
               </a>
             </div>
           </div>
