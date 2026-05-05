@@ -17,4 +17,12 @@ export const youtubeManualVideos: YoutubeManualEntry[] = [
   { id: "kH5GT8dAVO8" }, // https://youtu.be/kH5GT8dAVO8
   { id: "0gpKpE_-CJ8" }, // https://youtu.be/0gpKpE_-CJ8
   { id: "xN0klmIzx0o" }, // https://youtu.be/xN0klmIzx0o
+  { id: "OAhoVGOZGmc" }, // https://youtu.be/OAhoVGOZGmc
+  { id: "ikm-cXbxrbg" }, // https://youtu.be/ikm-cXbxrbg
+  { id: "YDBNVvqEh3I" }, // https://youtu.be/YDBNVvqEh3I
+  { id: "ccTmvwa48xQ" }, // https://youtu.be/ccTmvwa48xQ
+  { id: "8UkqDtm639c" }, // https://youtu.be/8UkqDtm639c
+  { id: "qkaEzo7WsF0" }, // https://youtu.be/qkaEzo7WsF0
+  { id: "-HC_yWkw28Q" }, // https://youtu.be/-HC_yWkw28Q
+  { id: "IzLV9_iEpVM" }, // https://youtu.be/IzLV9_iEpVM
 ];
