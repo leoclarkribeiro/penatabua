@@ -65,10 +65,10 @@ const FooterSection = () => {
               Pé na Tábua
             </p>
             <p className="font-body text-foreground/60 italic mb-4">
-              É a história de como um país tropical decidiu conquistar a neve e o fez.
+              A história do snowboard no Brasil
             </p>
             <p className="font-body text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Pé na Tábua. Todos os direitos reservados.
+              © {new Date().getFullYear()} Pé na Tábua.
             </p>
           </div>
         </div>
