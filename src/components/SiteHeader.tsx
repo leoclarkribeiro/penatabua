@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const linkClass =
@@ -7,6 +7,7 @@ const linkClass =
 
 const SiteHeader = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === "/";
   const [scrolled, setScrolled] = useState(false);
 
@@ -28,7 +29,10 @@ const SiteHeader = () => {
       {isHome ? (
         <button
           type="button"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => {
+            navigate({ pathname: "/", hash: "" }, { replace: true });
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className={cn(
             "font-display shrink-0 text-left text-base tracking-widest text-foreground uppercase md:text-lg",
             "transition-opacity hover:opacity-80",
